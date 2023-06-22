@@ -5,3 +5,31 @@
 
 
 
+let alunos = [{
+    nome: "João",
+    nota1:4,
+    nota2:6,
+}
+,{
+    nome: "Maria",
+    nota1:8,
+    nota2:9,
+}
+,{
+    nome:"Claudio",
+    nota1:10,
+    nota2:8.9,
+},
+{
+    nome:"Jorge",
+    nota1:9.8,
+    nota2:4.6
+}
+];
+
+let media = alunos.map((aluno)=>{
+    aluno.media = (aluno.nota1 + aluno.nota2)/2;
+    return aluno;
+});
+
+console.log(media.sort((primeiraMedia,segundaMedia)=> segundaMedia.media - primeiraMedia.media));
