@@ -27,9 +27,12 @@ let alunos = [{
 }
 ];
 
-let media = alunos.map((aluno)=>{
-    aluno.media = (aluno.nota1 + aluno.nota2)/2;
-    return aluno;
-});
+let alunosMedia = alunos.map(aluno=>{
+    return{
+        nome:aluno.nome,
+        media:(aluno.nota1+aluno.nota2)/2
 
-console.log(media.sort((primeiraMedia,segundaMedia)=> segundaMedia.media - primeiraMedia.media));
+    }
+
+})
+console.log(alunosMedia.sort((a,b)=>b.media-a.media))
